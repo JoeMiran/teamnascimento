@@ -1,0 +1,72 @@
+/* Em: src/assets/css/theme.css (VERSÃO FUNDO CLARO) */
+
+/* Define as variáveis de cor principais */
+:root {
+  --bjj-preto: #1a1a1a;
+  --bjj-cinza: #2b2b2b;     /* Usado no Sidebar escuro */
+  --bjj-vermelho: #d90429;
+  --bjj-texto-escuro: #1a1a1a; /* Texto para fundos claros */
+  --bjj-texto-claro: #f5f5f5;  /* Texto para fundos escuros */
+}
+
+/* Aplica a fonte "UFC" (Oswald) aos títulos */
+h1, h2, h3, h4, h5, h6, .display-4, .display-3, .display-2, .display-1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* TEMA PRINCIPAL (FUNDO CLARO)
+  O 'body' agora tem a cor de texto escura.
+  O fundo será o branco padrão do Bootstrap.
+*/
+body {
+  color: var(--bjj-texto-escuro) !important;
+  font-family: 'Oswald', sans-serif;
+  /* Removemos o background-color: var(--bjj-preto); */
+}
+
+/* CARDS (FUNDOS CLAROS)
+  Deixa o Bootstrap gerir os cards (fundo branco padrão).
+  Apenas garantimos a fonte.
+*/
+.card {
+  font-family: 'Oswald', sans-serif;
+  /* Removemos os estilos de card escuro */
+}
+
+/* SPINNER
+  Garante que o spinner usa a cor vermelha da identidade.
+*/
+.spinner-border, .spinner-grow {
+  color: var(--bjj-vermelho);
+}
+.text-primary {
+  color: var(--bjj-texto-escuro) !important;
+}
+
+/* LISTAS
+  Removemos os fundos escuros.
+*/
+.list-group-item {
+  color: var(--bjj-texto-escuro);
+}
+
+/* Estilos de Alerta (Mantém) */
+.alert-danger {
+  background-color: var(--bjj-vermelho);
+  color: var(--bjj-texto-claro);
+  border-color: #ff4d6d;
+}
+.alert-warning {
+  background-color: #ffb703;
+  color: var(--bjj-preto);
+  border-color: #ffb703;
+}
+
+/* Cores de texto personalizadas para os Stats (Mantém) */
+.text-success { color: #2a9d8f !important; }
+.text-danger  { color: var(--bjj-vermelho) !important; }
+.text-warning { color: #fca311 !important; }
+.text-info    { color: #219ebc !important; }
