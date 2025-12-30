@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import DashboardView from '../views/DashboardView.vue'
 // 1. Importa as novas views
 import RelatorioAnualView from '../views/RelatorioAnualView.vue'
-import AlunosView from '../views/AlunosView.vue'
+import AlunosView from '../views/Matricula.vue'
 // Views usadas nas rotas de criação/edição de aluno
 import AlunoCreateView from '../views/AlunoCreateView.vue'
 import AlunoEditView from '../views/AlunoEditView.vue'

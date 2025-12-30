@@ -10,6 +10,7 @@ import "./assets/css/theme.css";
 import { createApp } from 'vue';
 import App from './App.vue';       // O "molde" principal da tua app
 import router from './router';   // O teu sistema de rotas (páginas)
+import { usePWA } from './composables/usePWA'; // PWA Integration
 
 // 3. Cria a aplicação
 const app = createApp(App);
@@ -20,3 +21,9 @@ app.use(router);
 // 5. (O PASSO MAIS IMPORTANTE) Monta a aplicação no <div id="app">
 //    que está no teu index.html
 app.mount('#app');
+
+// 6. Inicializar PWA
+const { init: initPWA } = usePWA();
+initPWA().catch(error => {
+  console.warn('Aviso ao inicializar PWA:', error);
+});
